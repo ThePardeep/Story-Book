@@ -110,4 +110,51 @@ header .ms-header .header-hr hr {
   margin: 0%;
   border: 4px solid greenyellow;
 }
+
+footer .ms-footer {
+  background-color: black;
+}
+
+footer .ms-footer .footer-text {
+  text-align: center;
+}
+
+footer .ms-footer .footer-text p {
+  padding: 0%;
+  margin: 0%;
+  color: white;
+  font-size: 20px;
+  font-family: "Thasadith", serif;
+}
+
+footer .ms-footer .footer-text p a {
+  color: wheat;
+  text-decoration: none;
+}
+
+footer .ms-footer .footer-links {
+  text-align: center;
+}
+
+footer .ms-footer .footer-links a {
+  text-decoration: none;
+  color: wheat;
+  font-size: 20px;
+}
+
+footer .footer-lines-decoration {
+  height: 6px;
+  position: absolute;
+  width: 100%;
+}
+
+footer .footer-lines-decoration span {
+  height: 100%;
+  width: 14%;
+  float: left;
+}
+
+footer .footer-lines-decoration span:first-child, footer .footer-lines-decoration span:last-child {
+  width: 15%;
+}
 /*# sourceMappingURL=Style.css.map */

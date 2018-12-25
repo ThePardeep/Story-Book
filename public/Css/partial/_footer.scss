@@ -1,0 +1,41 @@
+footer{
+    .ms-footer{
+        background-color: black;
+        .footer-text {
+             text-align: center;
+            p{
+                padding: 0%;
+                margin: 0%;
+                color: white;
+                font-size: 20px;
+                font-family:$FontFamily, serif;
+                a{
+                    color: wheat;
+                    text-decoration: none;
+                }
+            }
+        }
+        .footer-links {
+            text-align: center;
+            a{
+                text-decoration: none;
+                color:wheat;
+                font-size: 20px;
+            }
+        }
+        
+    }
+    .footer-lines-decoration{
+        height: 6px;
+        position: absolute;
+        width: 100%;
+        span {
+            height: 100%;
+            width: 14%;
+            float: left;
+        }
+        span:first-child, span:last-child {
+            width: 15%; 
+        }      
+    }
+}
