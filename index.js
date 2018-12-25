@@ -2,15 +2,32 @@ const express = require("express");
 const passport = require("passport");
 const Exp_Session = require("express-session");
 const BodyParser = require("body-parser");
+const path = require("path");
+const Mongoose = require("mongoose");
 const CookieParser = require("cookie-parser");
 const Handlebars = require("express-handlebars");
 
 //Import Key File
 
 const Keys = require("./config/keys");
+
 //Init APP
 
 const app = express();
+
+//User Schema File
+
+const UserSchema = require("./model/User");
+
+//Connect Mongoose
+Mongoose.globle = process.globle
+Mongoose.connect(Keys.MongooseURL, {
+    useNewUrlParser : true
+})
+    .then( () => {
+        console.log("MongoDb Succesfully Connected");
+    })
+    .catch((err) => console.log(err));
 
 //Express Session Middleware
 
@@ -20,12 +37,8 @@ app.use(Exp_Session({
     saveUninitialized : true
 }));
 
-//IMPORT Google Strategy File
-
-require("./Stratergies/google_auth")(passport);
-
 //Static Folder 
-app.use(express.static(__dirname+"public"));
+app.use(express.static(path.join(__dirname,"./public")));
 
 //Handlebars MiddleWare
 
@@ -41,6 +54,17 @@ app.use(CookieParser());
 //Passport MiddleWares
 app.use(passport.initialize());
 app.use(passport.session());
+
+//IMPORT Google Strategy File
+
+require("./Stratergies/google_auth")(passport);
+
+//Local Variables
+
+app.use(function(req,res,next) {
+    res.locals.user = req.user || null;
+    next();
+});
 
 //@Type : GET
 //@Route : /

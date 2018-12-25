@@ -1,0 +1,51 @@
+<header>
+    <div class="header-lines-decoration">
+        <span class="bg-red"></span>
+        <span class="bg-blue-light"></span>
+        <span class="bg-green"></span>
+        <span class="bg-blue"></span>
+        <span class="bg-yellow"></span>
+        <span class="bg-orange"></span>
+        <span class="bg-green"></span>
+    </div>
+
+    <div class="ms-header">
+        <div class="header-logo">
+            <img src="/img/logo.png" alt="Ck Story Book">
+        </div>
+
+        <div class="header-title">
+            <h1 >Ck Story Book</h1>
+        </div>
+        {{!-- Header Link For Desktop --}}
+        <div class="header-links">
+        {{!-- Links For Authorized Person --}}
+        {{#if user }}
+         <div class="auth-person-links">
+             <ol >
+             <li>
+                 <a href="">Profile</a>
+             </li>
+             <li>
+                 <a href="">Stories</a>
+             </li>
+             <li>
+                 <a href="">Add Story</a>
+             </li>
+         </ol>
+         </div>
+        {{else }}
+         <div class="public-links">
+            <ol>
+                <li><a href="">Public Stories</a></li>
+                <li><a href="">About Us </a></li>
+                <li><a href="">Login </a></li>
+            </ol>
+         </div>
+         {{/if}}
+        </div>
+        <div class="header-hr">
+            <hr class="hr-green">
+        </div>
+    </div>
+</header>

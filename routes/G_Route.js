@@ -23,5 +23,21 @@ function(req, res) {
   res.redirect('/dashboard');
 });
 
+Router.get("/verify",(req,res) => {
+  if(req.user) {
+    res.send(req.user)
+  } else {
+    res.send("Not Auth")
+  }
+});
 
+//@Type : GET
+//@Route : /auth/logout
+//@Desc : User LOGOUT 
+//@Access : PRIVATE
+
+Router.get("/logout" , (req,res) => {
+  req.logOut();
+  res.redirect("/");
+})
 module.exports = Router;
