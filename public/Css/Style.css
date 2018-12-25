@@ -62,11 +62,18 @@ header .ms-header .header-logo img {
   width: 100px;
 }
 
+@media (max-width: 576px) {
+  header .ms-header .header-logo img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
 header .ms-header .header-title {
   line-height: 1;
   vertical-align: middle;
   display: inline-block;
-  margin-left: 3%;
+  margin-left: 1%;
 }
 
 header .ms-header .header-title h1 {
@@ -76,24 +83,46 @@ header .ms-header .header-title h1 {
   display: inline-block;
 }
 
+@media (max-width: 576px) {
+  header .ms-header .header-title h1 {
+    font-size: 25px;
+  }
+}
+
 header .ms-header .header-links {
-  text-align: center;
   background-color: white;
   margin-bottom: 0px;
 }
 
+@media (man-width: 576px) {
+  header .ms-header .header-links {
+    text-align: center;
+  }
+}
+
 header .ms-header .header-links ol {
-  margin-left: 8px;
   list-style-type: none;
   display: block;
   margin-bottom: 0px;
   padding: 4px;
 }
 
+@media (min-width: 576px) {
+  header .ms-header .header-links ol {
+    margin-left: 8px;
+  }
+}
+
 header .ms-header .header-links ol li {
   border: 2px solid #0c0606;
   border-radius: 4px;
   display: inline-block;
+}
+
+@media (max-width: 576px) {
+  header .ms-header .header-links ol li {
+    margin-top: 6px;
+  }
 }
 
 header .ms-header .header-links ol li a {

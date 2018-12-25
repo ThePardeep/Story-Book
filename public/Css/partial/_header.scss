@@ -28,26 +28,37 @@ header{
             display: inline-block;
             height: 100px;
             width: 100px;
+            @media (max-width : 576px) {
+                 height: 80px;
+                 width: 80px;
+            }            
         }
     }
     .header-title {
         line-height: 1;
         vertical-align:middle;
         display: inline-block;
-        margin-left: 3%;
+        margin-left: 1%;
         h1{
             margin-top: 7px;
+            @media (max-width:576px) {
+                font-size: 25px;
+            }
             color: wheat;
             font-family: Thasadith,serif;
             display: inline-block;         
         }
     }
     .header-links {
-        text-align: center;
+        @media (man-width : 576px) {
+            text-align: center;
+        }
         background-color: white;
         margin-bottom: 0px;
         ol {
-            margin-left: 8px;
+            @media (min-width : 576px) {
+                margin-left: 8px;
+            }
             list-style-type: none;
             display: block;
             margin-bottom: 0px;
@@ -56,6 +67,9 @@ header{
                 border: 2px solid #0c0606;
                 border-radius: 4px;
                 display: inline-block;
+                @media (max-width : 576px) {
+                    margin-top: 6px;
+                }
                 a{
                   font-size: 22px;
                   color: #6a85a6;
