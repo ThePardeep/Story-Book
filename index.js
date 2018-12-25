@@ -84,4 +84,4 @@ app.use("/auth",Auth);
 //Port
 const Port = process.env.PORT || 3000;
 
-app.listen(Port,"localhost",() => console.log(`Server Running At Port: ${Port}`));
+app.listen(Port,() => console.log(`Server Running At Port: ${Port}`));
