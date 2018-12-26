@@ -63,6 +63,7 @@ require("./Stratergies/google_auth")(passport);
 
 app.use(function(req,res,next) {
     res.locals.user = req.user || null;
+  // res.locals.meta_tags = 
     next();
 });
 
@@ -72,7 +73,26 @@ app.use(function(req,res,next) {
 //@Access : PUBLIC
 
 app.get("/",(req,res) => {
-    res.render('index');
+    if(req.user) {
+        res.redirect("/user/public/stories");
+    } else {
+        res.locals.meta = {
+            title : "Ck Book"
+        };
+        res.render('index');
+    }
+});
+
+//@Type : GET
+//@Route : /about
+//@Desc : About Route
+//@Access : PUBLIC
+
+app.get("/about",(req,res) =>{
+    res.locals.meta = {
+        title : "About Us"
+    }
+    res.render("about");
 });
 
 //Import Google_Login Route File

@@ -1,4 +1,69 @@
 @import "./partial/color";
 $FontFamily : "Thasadith";
+$Raleway : "Raleway";
+
 @import "./partial/header";
 @import "./partial/footer";
+.main-box{
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 15px;
+   .main-box-content {
+    h1{
+        @media (max-width : 576px) {
+            font-size: 34px;
+        }
+        font-family: $Raleway;
+    }
+    p{
+        font-size: 25px;
+        font-family: $Raleway,serif;
+    }
+    hr{
+        border: 2px solid rgb(54, 138, 216);
+    }
+   }
+   .login-link{
+           a{
+               text-align: center;
+               color: white;
+               padding: 6px 10px 6px 10px;
+               border: 1px solid red;
+               background-color: rgb(241, 65, 65);
+               text-decoration: none;
+               font-size: 20px;
+               font-family: $Raleway;
+               @media (min-width : 576px) {
+                padding: 4px 80px 4px 80px;
+               }
+           }
+           a:hover{
+               background-color: rgb(202, 45, 45);
+           }
+   }
+   .pb-links{
+       margin-top: 10px;
+       ol{
+           list-style-type: none;
+           li{
+            a{
+               // text-align: center;
+                font-family: $Raleway,serif;
+                font-size: 20px;
+                color: white;
+                margin-right: 40px;
+                text-decoration: none;
+                background-color: rgb(116, 113, 113);
+                padding: 6px 10px 6px 10px;
+                @media (min-width : 576px) {
+                    padding: 6px 80px 6px 80px;
+                    font-size: 20px;
+                   }
+            }
+            a:hover{
+                background-color: rgb(104, 99, 99);
+            }
+           }
+       }
+   }
+}

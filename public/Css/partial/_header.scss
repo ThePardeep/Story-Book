@@ -50,7 +50,7 @@ header{
         }
     }
     .header-links {
-        @media (man-width : 576px) {
+        @media (min-width : 576px) {
             text-align: center;
         }
         background-color: white;
@@ -64,19 +64,26 @@ header{
             margin-bottom: 0px;
             padding: 4px;
             li {
-                border: 2px solid #0c0606;
+                border: 2px solid #5b9996;
                 border-radius: 4px;
                 display: inline-block;
                 @media (max-width : 576px) {
-                    margin-top: 6px;
+                    margin-top: 2px;
                 }
                 a{
                   font-size: 22px;
-                  color: #6a85a6;
+                  @media (max-width : 576px) {
+                      font-size: 18px;
+                  }
+                  color: #0c0f14;
                   text-decoration: none;
-                  font-family: $FontFamily;
+                  font-family: $Raleway;
                   padding: 2px 7px 2px 7px;
                   display: block;
+                }
+                a:hover{
+                    color: white;
+                    background-color: rgb(90, 216, 132);
                 }
             }
         }
@@ -85,7 +92,10 @@ header{
         hr {
             padding: 0%;
             margin: 0%;
-            border: 4px solid greenyellow;
+            border: 2px solid rgb(52, 182, 85);
+            @media (max-width : 576px) {
+                border: 2px solid rgb(52, 182, 85);
+            }
         }
     }
     
