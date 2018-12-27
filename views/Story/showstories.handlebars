@@ -1,0 +1,13 @@
+<div class="public-stories container">
+    {{#each Stories}}
+    <div class="card public-story-box" style="width: 18rem;">
+        <div class="card-body">
+            <h1 style="font-size:2rem;"> {{title}} </h1> <hr>
+            <p style="font-size:1.4rem;" class="card-text"> {{ DesLength (RemoveHtml body) }} </p>
+            <a class="btn btn-primary" href="story/show/{{id}}"> Read More </a>
+        </div>
+    </div>
+    {{else}}
+     <p style="font-family:Raleway;" class="display-2">No Stories</p>
+    {{/each}}
+</div>

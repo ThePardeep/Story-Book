@@ -1,0 +1,22 @@
+<div class="container add-story-form">
+    <div class="page_title">
+        <h1 class="display-4">Add Story</h1>
+    </div>
+    <form action="/story/add" method="POST">
+        <label for="Title">Title :</label><br>
+        <input class="form-control" type="text" name="title" id="Title" placeholder="Add Title"><br>
+        <label for="allow_cmt">Allow Comment : </label>
+        <input style="margin-left:10px;" type="checkbox" name="allow_cmt" id="allow_cmt"><br>
+        <label for="Status">Status :</label>
+        <select style="margin-left:10px;" name="status" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option value="public" selected>Public</option>
+            <option value="private">Private</option>
+            <option value="draft">Draft</option>
+        </select><br>
+        <br>
+        <label for="Body">Tell Your Story :</label> <br>
+        <textarea class="form-control" type="text" name="content" id="Body" placeholder="Share Your Story" cols="30" rows="10"></textarea>
+        <button class="btn btn-dark btn-block" type="submit">Post</button>
+    </form>
+
+</div>

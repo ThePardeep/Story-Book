@@ -278,4 +278,71 @@ footer .footer-lines-decoration span:first-child, footer .footer-lines-decoratio
 .main-box .pb-links ol li a:hover {
   background-color: #686363;
 }
+
+.add-story-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add-story-form .page_title {
+  margin-bottom: 2px;
+  border-bottom: 3px solid #4343cf;
+}
+
+.add-story-form form {
+  margin-top: 10px;
+}
+
+.add-story-form form label {
+  font-family: "Raleway", serif;
+  font-size: 22px;
+}
+
+.add-story-form form input {
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+
+.add-story-form form button {
+  margin-top: 10px;
+}
+
+.public-stories {
+  margin: 15px 0px 15px 0px;
+}
+
+.public-stories .public-story-box {
+  display: inline-block;
+  margin: 10px;
+  font-family: "Raleway", serif;
+}
+
+.public-stories .public-story-box hr {
+  border: 2px solid #508a39;
+}
+
+.read-story .read-story-box {
+  margin: 10px 5px;
+  border: 2px solid #f1f1f1;
+}
+
+@media (max-width: 576px) {
+  .read-story .read-story-box {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.read-story .read-story-box .story-header {
+  margin-left: 4px;
+}
+
+.read-story .read-story-box .story-header h1 {
+  font-family: "Raleway", serif;
+}
+
+.read-story .read-story-box .story-header p {
+  display: inline-block;
+}
 /*# sourceMappingURL=Style.css.map */

@@ -15,36 +15,40 @@
         </div>
 
         <div class="header-title">
-            <h1 >Ck Story Book</h1>
+            <h1>Ck Story Book</h1>
         </div>
         {{!-- Header Link For Desktop --}}
         <div class="header-links">
-        {{!-- Links For Authorized Person --}}
-        {{#if user }}
-         <div class="auth-person-links">
-             <ol >
-             <li>
-                 <a href="">Profile</a>
-             </li>
-             <li>
-                 <a href="">Stories</a>
-             </li>
-             <li>
-                 <a href="">Add Story</a>
-             </li>
-             <li>
-                 <a href="/auth/logout">Log Out</a>
-             </li>
-         </ol>
-         </div>
-        {{else }}
-         <div class="public-links">
-            <ol>
-                <li><a href="">Public Stories</a></li>
-                <li><a href="">About Us </a></li>
-            </ol>
-         </div>
-         {{/if}}
+            {{!-- Links For Authorized Person --}}
+            {{#if user }}
+            <div class="auth-person-links">
+                <ol>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/user/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/stories">Stories</a>
+                    </li>
+                    <li>
+                        <a href="/story/add">Add Story</a>
+                    </li>
+                    <li>
+                        <a href="/auth/logout"><i class="fa fa-sign-out"></i> Log Out</a>
+                    </li>
+                </ol>
+            </div>
+            {{else }}
+            <div class="public-links">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/stories">Public Stories</a></li>
+                    <li><a href="/about">About Us </a></li>
+                </ol>
+            </div>
+            {{/if}}
         </div>
         <div class="header-hr">
             <hr class="hr-green">

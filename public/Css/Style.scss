@@ -1,69 +1,124 @@
 @import "./partial/color";
-$FontFamily : "Thasadith";
-$Raleway : "Raleway";
+$FontFamily: "Thasadith";
+$Raleway: "Raleway";
 
 @import "./partial/header";
 @import "./partial/footer";
-.main-box{
-    margin-bottom: 10px;
-    text-align: center;
-    margin-top: 15px;
-   .main-box-content {
-    h1{
-        @media (max-width : 576px) {
-            font-size: 34px;
+.main-box {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 15px;
+  .main-box-content {
+    h1 {
+      @media (max-width: 576px) {
+        font-size: 34px;
+      }
+      font-family: $Raleway;
+    }
+    p {
+      font-size: 25px;
+      font-family: $Raleway, serif;
+    }
+    hr {
+      border: 2px solid rgb(54, 138, 216);
+    }
+  }
+  .login-link {
+    a {
+      text-align: center;
+      color: white;
+      padding: 6px 10px 6px 10px;
+      border: 1px solid red;
+      background-color: rgb(241, 65, 65);
+      text-decoration: none;
+      font-size: 20px;
+      font-family: $Raleway;
+      @media (min-width: 576px) {
+        padding: 4px 80px 4px 80px;
+      }
+    }
+    a:hover {
+      background-color: rgb(202, 45, 45);
+    }
+  }
+  .pb-links {
+    margin-top: 10px;
+    ol {
+      list-style-type: none;
+      li {
+        a {
+          // text-align: center;
+          font-family: $Raleway, serif;
+          font-size: 20px;
+          color: white;
+          margin-right: 40px;
+          text-decoration: none;
+          background-color: rgb(116, 113, 113);
+          padding: 6px 10px 6px 10px;
+          @media (min-width: 576px) {
+            padding: 6px 80px 6px 80px;
+            font-size: 20px;
+          }
         }
-        font-family: $Raleway;
+        a:hover {
+          background-color: rgb(104, 99, 99);
+        }
+      }
+    }
+  }
+}
+
+.add-story-form {
+  margin-top: 20px;
+  .page_title {
+    margin-bottom: 2px;
+    border-bottom: 3px solid rgb(67, 67, 207);
+  }
+  margin-bottom: 20px;
+  form {
+    margin-top: 10px;
+    label {
+      font-family: $Raleway, serif;
+      font-size: 22px;
+    }
+    input{
+      border-left: 0px;
+      border-right: 0px;
+      border-top:0px;
+    }
+    button{
+      margin-top: 10px;
+    }
+  }
+}
+
+.public-stories{
+  margin: 15px 0px 15px 0px;
+  .public-story-box{
+    display: inline-block;
+    margin: 10px;
+    font-family: $Raleway,serif;
+    hr{
+      border: 2px solid rgb(80, 138, 57);
+    }
+  }
+}
+.read-story{
+.read-story-box{
+  margin: 10px 5px;
+  @media (max-width:576px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  border : 2px solid #f1f1f1;
+  .story-header{
+    margin-left: 4px;
+    h1{
+      font-family: $Raleway,serif;
     }
     p{
-        font-size: 25px;
-        font-family: $Raleway,serif;
+      display: inline-block;
     }
-    hr{
-        border: 2px solid rgb(54, 138, 216);
-    }
-   }
-   .login-link{
-           a{
-               text-align: center;
-               color: white;
-               padding: 6px 10px 6px 10px;
-               border: 1px solid red;
-               background-color: rgb(241, 65, 65);
-               text-decoration: none;
-               font-size: 20px;
-               font-family: $Raleway;
-               @media (min-width : 576px) {
-                padding: 4px 80px 4px 80px;
-               }
-           }
-           a:hover{
-               background-color: rgb(202, 45, 45);
-           }
-   }
-   .pb-links{
-       margin-top: 10px;
-       ol{
-           list-style-type: none;
-           li{
-            a{
-               // text-align: center;
-                font-family: $Raleway,serif;
-                font-size: 20px;
-                color: white;
-                margin-right: 40px;
-                text-decoration: none;
-                background-color: rgb(116, 113, 113);
-                padding: 6px 10px 6px 10px;
-                @media (min-width : 576px) {
-                    padding: 6px 80px 6px 80px;
-                    font-size: 20px;
-                   }
-            }
-            a:hover{
-                background-color: rgb(104, 99, 99);
-            }
-           }
-       }
-   }
+  }
+}
 }

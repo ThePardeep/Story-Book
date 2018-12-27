@@ -19,17 +19,10 @@ passport.authenticate('google', { scope: ['profile','email'] }));
 Router.get('/google/callback', 
 passport.authenticate('google', { failureRedirect: '/' }),
 function(req, res) {
-  // Successful authentication, redirect home.
-  res.redirect('/dashboard');
+  // Successful authentication, redirect Stories
+  res.redirect('/stories');
 });
 
-Router.get("/verify",(req,res) => {
-  if(req.user) {
-    res.send(req.user)
-  } else {
-    res.send("Not Auth")
-  }
-});
 
 //@Type : GET
 //@Route : /auth/logout
