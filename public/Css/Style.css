@@ -509,29 +509,61 @@ footer .footer-lines-decoration span:first-child, footer .footer-lines-decoratio
   border: 3px solid #46a1ad;
 }
 
-.read-story .read-story-box .post-comments {
+.read-story .read-story-box .alert-signin {
+  text-align: center;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.read-story .read-story-box .alert-signin p {
+  margin-top: 30px;
+  font-family: Raleway;
+}
+
+.read-story .read-story-box .alert-signin a {
+  text-align: center;
+  color: white;
+  padding: 6px 10px 6px 10px;
+  border: 1px solid red;
+  background-color: #f14141;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Raleway";
+}
+
+@media (min-width: 576px) {
+  .read-story .read-story-box .alert-signin a {
+    padding: 4px 80px 4px 80px;
+  }
+}
+
+.read-story .read-story-box .alert-signin a:hover {
+  background-color: #ca2d2d;
+}
+
+.read-story .read-story-box .print-comments {
   border: 2px solid #1b72ac;
   padding: 15px;
   border-radius: 50px;
   margin-bottom: 8px;
 }
 
-.read-story .read-story-box .post-comments .comment-header {
+.read-story .read-story-box .print-comments .comment-header {
   border-bottom: 2px solid #26c0c0;
 }
 
-.read-story .read-story-box .post-comments .comment-header img {
+.read-story .read-story-box .print-comments .comment-header img {
   height: 60px;
   border-radius: 50px;
   width: 60px;
   margin-top: -28px;
 }
 
-.read-story .read-story-box .post-comments .comment-header .header-data {
+.read-story .read-story-box .print-comments .comment-header .header-data {
   display: inline-block;
 }
 
-.read-story .read-story-box .post-comments .comment-header .header-data p {
+.read-story .read-story-box .print-comments .comment-header .header-data p {
   padding: 0px;
   margin: 0px;
   font-size: 20px;
@@ -539,19 +571,19 @@ footer .footer-lines-decoration span:first-child, footer .footer-lines-decoratio
   font-family: "Raleway";
 }
 
-.read-story .read-story-box .post-comments .comment-header .header-data h6 {
+.read-story .read-story-box .print-comments .comment-header .header-data h6 {
   padding: 0px;
   font-family: "Raleway";
   margin: 0%;
   margin-left: 10px;
 }
 
-.read-story .read-story-box .post-comments .comment-body {
+.read-story .read-story-box .print-comments .comment-body {
   margin-top: 5px;
   text-align: center;
 }
 
-.read-story .read-story-box .post-comments .comment-body h4 {
+.read-story .read-story-box .print-comments .comment-body h4 {
   display: inline-block;
   margin: 0%;
   font-family: Raleway;

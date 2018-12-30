@@ -19,6 +19,7 @@
         </div>
         {{#if Story.allowcomment}}
         <hr style="border: 2px solid #2daf7d;">
+        {{#if ./user}}
         <div class="post-comment">
             <h1 class="h1-c">Add Comment :</h1><br>
             <form action="/story/add/comment/{{Story.id}}" method="post">
@@ -28,9 +29,15 @@
                 <input type="submit" value="submit" class="btn btn-dark btn-block">
             </form>
         </div>
+        {{else}}
+        <div class="alert-signin">
+            <p> For Adding Comment Please Sign In</p>
+            <a href="/auth/google">Login With Google</a>
+        </div>
+        {{/if}}
         <hr style="border: 2px solid #2c89be;">
         {{#each Story.comment}}
-        <div class="post-comments">
+        <div class="print-comments">
             <div class="comment-header">
                 <img src="{{CommentUser.image}}" alt="Comment User">
                 <div class="header-data">

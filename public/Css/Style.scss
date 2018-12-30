@@ -216,7 +216,32 @@ $Raleway: "Raleway";
         }
       }
     }
-    .post-comments {
+    .alert-signin{
+      text-align: center;
+      height: 150px;
+      border: 1px solid red;
+      p{
+        margin-top: 30px;
+        font-family: Raleway;
+      }
+      a {
+        text-align: center;
+        color: white;
+        padding: 6px 10px 6px 10px;
+        border: 1px solid red;
+        background-color: rgb(241, 65, 65);
+        text-decoration: none;
+        font-size: 20px;
+        font-family: $Raleway;
+        @media (min-width: 576px) {
+          padding: 4px 80px 4px 80px;
+        }
+      }
+      a:hover {
+        background-color: rgb(202, 45, 45);
+      }
+    }
+    .print-comments {
       border: 2px solid #1b72ac;
       padding: 15px;
       border-radius: 50px;

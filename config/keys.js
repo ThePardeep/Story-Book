@@ -5,3 +5,4 @@ module.exports = {
     MongooseURL : process.env.MONGO_URI,
     Secret : "CK72??"
 }
+
