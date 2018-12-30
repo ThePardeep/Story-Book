@@ -1,0 +1,43 @@
+.profile-page {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  hr{
+      border: 2px solid #478bc4;
+  }
+  .profile-page-heading {
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: $Raleway;
+    border-bottom: 2px solid rgb(161, 50, 50);
+  }
+  .user-profile {
+    display: inline-block;
+    font-family: $Raleway;
+    text-align: center;
+    img {
+      display: inline-block;
+    }
+    .user-info{
+        display: inline-block;
+        h1 {
+            font-family: $Raleway;
+            margin-left: 10px;
+            display: inline-block;
+          }
+          p {
+            margin-top: 20px;
+            font-size: 22px;
+            font-family: $Raleway;
+          }
+    }
+  }
+  .user-stories{
+    .user-stories-box{
+        margin: 10px;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      display: inline-block;
+    }
+  }
+}

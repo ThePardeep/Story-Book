@@ -3,13 +3,20 @@ const passport = require("passport");
 const Exp_Session = require("express-session");
 const BodyParser = require("body-parser");
 const path = require("path");
+const flash = require("connect-flash");
 const Mongoose = require("mongoose");
 const CookieParser = require("cookie-parser");
 const Handlebars = require("express-handlebars");
 
 //Import Handlebar Helper
 
-const { DesLength, RemoveHtml, DateFormat } = require("./config/hdb");
+const {
+  DesLength,
+  RemoveHtml,
+  DateFormat,
+  EditButton,
+  CheckStoryStatus
+} = require("./config/hdb");
 
 //Import Key File
 
@@ -61,7 +68,9 @@ app.engine(
     helpers: {
       DesLength: DesLength,
       RemoveHtml: RemoveHtml,
-      DateFormat: DateFormat
+      DateFormat: DateFormat,
+      EditButton: EditButton,
+      CheckStoryStatus: CheckStoryStatus
     },
     defaultLayout: "main"
   })
@@ -83,11 +92,15 @@ app.use(passport.session());
 
 require("./Stratergies/google_auth")(passport);
 
+//Flash Middelware
+
+app.use(flash());
+
 //Local Variables
 
 app.use(function(req, res, next) {
   res.locals.user = req.user || null;
-  // res.locals.meta_tags =
+  res.locals.notAuth_msg = req.flash("notAuth_msg");
   next();
 });
 
@@ -98,11 +111,7 @@ app.use(function(req, res, next) {
 
 app.get("/", (req, res) => {
   if (req.user) {
-    //res.redirect("/stories");
-    res.locals.meta = {
-      title: "Ck Book"
-    };
-    res.render("index");
+    res.redirect("/stories");
   } else {
     res.locals.meta = {
       title: "Ck Book"
@@ -148,9 +157,14 @@ const Auth = require("./routes/G_Route");
 
 const Story = require("./routes/Story_route");
 
+//Import User Routes
+
+const User = require("./routes/User_Route");
+
 //Route Paths
 app.use("/auth", Auth);
 app.use("/story", Story);
+app.use("/user", User);
 
 //Port
 const Port = process.env.PORT || 3000;

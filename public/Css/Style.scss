@@ -4,6 +4,7 @@ $Raleway: "Raleway";
 
 @import "./partial/header";
 @import "./partial/footer";
+@import "./partial/profilepage";
 .main-box {
   margin-bottom: 10px;
   text-align: center;
@@ -81,44 +82,179 @@ $Raleway: "Raleway";
       font-family: $Raleway, serif;
       font-size: 22px;
     }
-    input{
+    input {
       border-left: 0px;
       border-right: 0px;
-      border-top:0px;
+      border-top: 0px;
     }
-    button{
+    button {
       margin-top: 10px;
     }
   }
 }
 
-.public-stories{
-  margin: 15px 0px 15px 0px;
-  .public-story-box{
+.public-stories {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .public-story-box {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    .edit-button {
+      line-height: 1;
+      color: #f1f1f1;
+      border: none;
+
+      font-family: $Raleway;
+      font-size: 1.4rem;
+      margin-left: 70%;
+      margin-top: 5px;
+      text-decoration: none;
+      padding: 7%;
+      display: inline-block;
+      position: absolute;
+      border-radius: 70%;
+      background-color: rgb(236, 43, 43);
+    }
     display: inline-block;
     margin: 10px;
-    font-family: $Raleway,serif;
-    hr{
+    font-family: $Raleway, serif;
+    hr {
       border: 2px solid rgb(80, 138, 57);
     }
   }
 }
-.read-story{
-.read-story-box{
-  margin: 10px 5px;
-  @media (max-width:576px) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  border : 2px solid #f1f1f1;
-  .story-header{
-    margin-left: 4px;
-    h1{
-      font-family: $Raleway,serif;
+.read-story {
+  .post-author-card-mb {
+    @media (min-width: 800px) {
+      display: none;
     }
-    p{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    .author-name-chip {
+      text-decoration: none;
+      text-align: center;
+      border: 2px solid black;
+      padding: 4px 10px 4px 10px;
+      border-radius: 30px;
+      font-family: $Raleway;
+      border-left: 6px solid red;
+      border-right: 6px solid red;
+    }
+  }
+  .post-author-card-dsk {
+    @media (max-width: 800px) {
+      display: none;
+    }
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(177, 161, 161, 0.75);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(161, 144, 144, 0.75);
+    box-shadow: 10px 10px 5px -5px rgba(146, 126, 126, 0.75);
+    margin-top: 10px;
+    float: right;
+    margin-right: 2%;
+    .author-name-chip {
+      text-align: center;
+      border: 2px solid black;
+      text-decoration: none;
+      padding: 10px 10px 10px 10px;
+      border-radius: 30px;
+      border-right: 6px solid red;
+      font-family: $Raleway;
+      border-left: 6px solid red;
+    }
+  }
+
+  .read-story-box {
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(177, 161, 161, 0.75);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(161, 144, 144, 0.75);
+    box-shadow: 10px 10px 5px -5px rgba(146, 126, 126, 0.75);
+    @media (min-width: 800px) {
+      width: 70%;
+    }
+    @media (max-width: 960px) and (min-width: 800px) {
+      width: 64%;
+    }
+    margin: 10px 5px;
+    @media (max-width: 576px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    border: 2px solid #f1f1f1;
+    .story-header {
+      margin-left: 15px;
+      margin-right: 15px;
+      h1 {
+        font-family: $Raleway, serif;
+      }
+      p {
+        display: inline-block;
+      }
+      hr {
+        border: 2px solid black;
+      }
+    }
+    .story-body {
+      margin-left: 20px;
+      p {
+        font-family: $Raleway;
+        font-size: 20px;
+      }
+    }
+    .post-comment {
+      margin-top: 10px;
+      margin-bottom: 10px;
       display: inline-block;
+      .h1-c {
+        font-family: $Raleway;
+      }
+      form {
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: $Raleway;
+        textarea {
+          border: 3px solid rgb(70, 161, 173);
+        }
+      }
+    }
+    .post-comments {
+      border: 2px solid #1b72ac;
+      padding: 15px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+      .comment-header {
+        border-bottom: 2px solid rgb(38, 192, 192);
+        img {
+          height: 60px;
+          border-radius: 50px;
+          width: 60px;
+          margin-top: -28px;
+        }
+        .header-data {
+          display: inline-block;
+          p {
+            padding: 0px;
+            margin: 0px;
+            font-size: 20px;
+            margin-left: 10px;
+            font-family: $Raleway;
+          }
+          h6{
+            padding: 0px;
+            font-family: $Raleway;
+            margin: 0%;
+            margin-left: 10px;
+          }
+        }
+      }
+      .comment-body{
+        margin-top: 5px;
+        text-align: center;
+        h4{
+          display: inline-block;
+          margin: 0%;
+          font-family: Raleway;
+        }
+      }
     }
   }
-}
 }

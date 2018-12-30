@@ -5,6 +5,7 @@
             <h1 style="font-size:2rem;"> {{title}} </h1> <hr>
             <p style="font-size:1.4rem;" class="card-text"> {{ DesLength (RemoveHtml body) }} </p>
             <a class="btn btn-primary" href="story/show/{{id}}"> Read More </a>
+            {{{EditButton id user ../user.id }}}
         </div>
     </div>
     {{else}}

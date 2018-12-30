@@ -1,9 +1,60 @@
 <div class="read-story">
-    <div class="read-story-box">
+    <div class="post-author-card-dsk">
+        <div class="card" style="width:250px;">
+            <img class="card-img-top" style="display:inline-block;" src="{{Story.user.image}}" alt="">
+            <div class="card-body">
+                <p class="author-name-chip">Author : {{Story.user.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class=" read-story-box">
         <div class="story-header">
-            <h1>{{title}}</h1>
-            <p class="lead"><b>Date :</b> {{DateFormat date "MMMM do YYYY"}} || </p>
-            <p class="lead"> <b>About :</b> {{user.name}}</p>
+            <h1>{{Story.title}}</h1>
+            <p class="lead"><b>Date :</b> {{DateFormat Story.date "MMMM do YYYY"}} || </p>
+            <p class="lead"> <b>About :</b> {{Story.user.name}}</p>
+            <hr>
+        </div>
+        <div class="story-body">
+            <p>{{{Story.body}}}</p>
+        </div>
+        {{#if Story.allowcomment}}
+        <hr style="border: 2px solid #2daf7d;">
+        <div class="post-comment">
+            <h1 class="h1-c">Add Comment :</h1><br>
+            <form action="/story/add/comment/{{Story.id}}" method="post">
+                <textarea class="form-control" placeholder="Add Comment" type="text" name="comment" id="comment" cols="50"
+                    rows="4"></textarea>
+                <br>
+                <input type="submit" value="submit" class="btn btn-dark btn-block">
+            </form>
+        </div>
+        <hr style="border: 2px solid #2c89be;">
+        {{#each Story.comment}}
+        <div class="post-comments">
+            <div class="comment-header">
+                <img src="{{CommentUser.image}}" alt="Comment User">
+                <div class="header-data">
+                    <p>{{CommentUser.name}}</p>
+                    <h6>Comment Date : {{DateFormat CommentUser.date}}</h6>
+                </div>
+            </div>
+            <div class="comment-body">
+                <h4>{{CommentBody}}</h4>
+            </div>
+        </div>
+        {{else}}
+        <h1 class="display-4">No Comments</h1>
+        {{/each}}
+        {{/if}}
+        <br>
+    </div>
+    <div class="post-author-card-mb">
+        <div class="card" style="margin:10px;text-align:center;">
+            <img class="card-img-top" style="margin-top:10px;margin-left:18%;display:inline-block;width:60%;height:60%;"
+                src="{{Story.user.image}}" alt="">
+            <div class="card-body">
+                <a href="/user/profile" class="author-name-chip">Author : {{Story.user.name}}</a>
+            </div>
         </div>
     </div>
 </div>
